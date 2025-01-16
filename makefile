@@ -13,3 +13,7 @@ install: ## Install the stuff
 run: ## Run example
 	@poetry run python bcgenerator.py 3148957871155 example
 	@poetry run python bcgenerator_pdf.py example.csv example.pdf
+
+reload: ## Reload Lock and requirements
+	@poetry lock
+	@poetry export --without-hashes --format=requirements.txt > requirements.txt
