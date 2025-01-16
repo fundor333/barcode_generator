@@ -16,8 +16,32 @@ exclude = '''
 '''
 
 [tool.skjold]
-sources = ["pyup", "gemnasium"]  # Sources to check against.
-report_only = true                         # Report only, always exit with zero.
-cache_dir = '.skylt_cache'                 # Cache location (default: `~/.skjold/cache`).
-cache_expires = 86400                      # Cache max. age.
-verbose = true                             # Be verbose.
+sources = ["pyup", "gemnasium"] # Sources to check against.
+report_only = true              # Report only, always exit with zero.
+cache_dir = '.skylt_cache'      # Cache location (default: `~/.skjold/cache`).
+cache_expires = 86400           # Cache max. age.
+verbose = true                  # Be verbose.
+
+[tool.poetry]
+name = "bcgenerator"
+version = "0.1.0"
+description = "Generate barcode from terminal"
+authors = ["Fundor333 <fundor333@fundor333.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-barcode = "^0.15.1"
+pillow = "^11.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+flake8 = "^7.1.1"
+autopep8 = "^2.3.2"
+pylint = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
