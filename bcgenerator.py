@@ -3,6 +3,9 @@ Script per generare EAN13
 
 Va chiamato passando come argomenti il codice da convertire e il path per l'output
 
+Esempio d'uso
+python bcgenerator.py 3148957871155 example
+
 Dipendenze:
 pip install python-barcode pillow
 """

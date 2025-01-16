@@ -34,6 +34,7 @@ readme = "README.md"
 python = "^3.11"
 python-barcode = "^0.15.1"
 pillow = "^11.1.0"
+reportlab = "^4.2.5"
 
 
 [tool.poetry.group.dev.dependencies]
